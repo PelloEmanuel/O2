@@ -1,0 +1,79 @@
+/* ===== VARIABLES DE MARCA ===== */
+/* Variable global con el color rojo corporativo del diario, reutilizable en todo el sitio */
+:root {
+    --color-rojo: #e63946;
+}
+
+/* ===== CLASES UTILITARIAS DE COLOR ===== */
+
+/* Fondo rojo de marca: usado en badges de categoría y elementos de acento */
+.bg-acento {
+    background-color: var(--color-rojo) !important;
+}
+
+/* Color rojo para el logo del diario en el navbar */
+.logo {
+    color: var(--color-rojo) !important;
+}
+
+/* Color rojo para los enlaces "Leer noticia completa" */
+.texto-acento {
+    color: var(--color-rojo) !important;
+}
+
+/* ===== EFECTOS HOVER ===== */
+
+/* Hover del botón principal: cambia a rojo al pasar el cursor */
+.btn-noticia-principal:hover {
+    background-color: var(--color-rojo) !important;
+    border-color: var(--color-rojo) !important;
+}
+
+/* Hover del botón de envío del formulario: cambia a rojo al pasar el cursor */
+.btn-enviar:hover {
+    background-color: var(--color-rojo) !important;
+    border-color: var(--color-rojo) !important;
+}
+
+/* Transición suave para la tarjeta de la noticia principal destacada */
+.tarjeta-principal {
+    transition: transform 0.3s ease;
+}
+
+/* Elevación de la tarjeta principal al hacer hover */
+.tarjeta-principal:hover {
+    transform: translateY(-5px);
+}
+
+/* Transición suave para las tarjetas de la grilla de noticias */
+.tarjeta-noticia {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Elevación y sombra de las tarjetas de la grilla al hacer hover */
+.tarjeta-noticia:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== IMÁGENES ===== */
+
+/* Altura fija para imágenes de la grilla: todas las tarjetas tienen la misma proporción */
+.img-grilla {
+    height: 180px;
+    object-fit: cover; /* Recorta la imagen para rellenar el espacio sin deformarla */
+}
+
+/* Altura mínima para la imagen de la noticia principal destacada */
+.img-principal-destacada {
+    min-height: 400px;
+    object-fit: cover;
+}
+
+/* En pantallas pequeñas, la imagen principal pasa a altura fija para verse correctamente */
+@media (max-width: 991px) {
+    .img-principal-destacada {
+        height: 300px;
+        min-height: unset; /* Elimina el min-height heredado para usar el height fijo */
+    }
+}
