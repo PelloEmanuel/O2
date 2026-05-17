@@ -1,0 +1,49 @@
+/* ===== VARIABLES DE MARCA ===== */
+/* Mismo token de color rojo que en el portal principal */
+:root {
+    --color-rojo: #e63946;
+    --color-oscuro-bg: #121212;
+    --color-oscuro-card: #1e1e1e;
+    --color-oscuro-texto: #e0e0e0;
+}
+
+/* ===== CLASES UTILITARIAS ===== */
+
+.bg-acento {
+    background-color: var(--color-rojo) !important;
+}
+
+.logo {
+    color: var(--color-rojo) !important;
+}
+
+/* ===== MODO OSCURO EN PÁGINAS DE NOTICIA ===== */
+body.modo-oscuro {
+    background-color: var(--color-oscuro-bg) !important;
+    color: var(--color-oscuro-texto) !important;
+}
+
+body.modo-oscuro .text-dark,
+body.modo-oscuro p,
+body.modo-oscuro h1,
+body.modo-oscuro h2 {
+    color: var(--color-oscuro-texto) !important;
+}
+
+body.modo-oscuro .text-secondary {
+    color: #aaaaaa !important;
+}
+
+body.modo-oscuro .border-top {
+    border-color: #444 !important;
+}
+
+/* ===== BOTÓN VOLVER ===== */
+.btn-volver {
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-volver:hover {
+    background-color: var(--color-rojo) !important;
+    border-color: var(--color-rojo) !important;
+}
